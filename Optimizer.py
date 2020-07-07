@@ -1,20 +1,3 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-import os
-import random
-import operator
-import pandas as pd
-import numpy as np
-import pprint
-from sklearn.metrics import mean_absolute_error as MAE
-from sklearn.metrics import mean_squared_error as MSE
-import pandasql as sqldf
-
-from Netze import NetzDynamic, Netz
-
-
 class HP_Layer_Optimizer(object):
     
     def __init__ (self, 
@@ -72,6 +55,7 @@ class HP_Layer_Optimizer(object):
             
         #aufrufen der Funktion, die anhand der übergebenen Parameter Modellkombinationen erzeugt
         if create_combinations:
+            print("in constructor bevor die kombinationen erzeugt werden")
             self.__create_combinations()
         else:
             print('NN Kombinationen müssen in Dictionary Form selbst übergeben werden')
@@ -99,9 +83,9 @@ class HP_Layer_Optimizer(object):
                     loss = criterion(out, target)
                     loss.backward()
                     optimizer.step()
-                    print("Train Epoche: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
-                        epoch, batch_id *len(data), len(self.train_data),
-                    100. * batch_id / len(self.train_data), loss.item()))
+                    ##rint("Train Epoche: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
+                    ##   epoch, batch_id *len(data), len(self.train_data),
+                    ##00. * batch_id / len(self.train_data), loss.item()))
                     batch_id +=1
         else:
             self.__model.train()
@@ -117,9 +101,9 @@ class HP_Layer_Optimizer(object):
                     loss = criterion(out, target)
                     loss.backward()
                     optimizer.step()
-                    print("Train Epoche: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
-                        epoch, batch_id *len(data), len(self.train_data),
-                    100. * batch_id / len(self.train_data), loss.item()))
+                    #print("Train Epoche: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
+                    #    epoch, batch_id *len(data), len(self.train_data),
+                    #100. * batch_id / len(self.train_data), loss.item()))
                     batch_id +=1
             
     def __test(self):
@@ -204,13 +188,13 @@ class HP_Layer_Optimizer(object):
     def validate_combinations(self):
         
         for key, combination in self.model_specs_combinations.items():
-            print(combination)
+            print("kombination, die jetzt trainiert wird", combination)
             self.__model = NetzDynamic(combination)
             optimizer = optim.Adam(self.__model.parameters(), lr = self.lr)
             #trainieren des modells
             for epoch in range(1,self.max_epochs):
                 self.__train(epoch, optimizer)  
-            
+            #Aufrufen der Testfunktion
             result = self.__test()
             A = result.prediction.tolist()
             y = result.target.tolist()
@@ -237,29 +221,35 @@ class HP_Layer_Optimizer(object):
         '''
         
         if self.__create_variations:
-            '''
-            es werden mehr als ein Netz von einer bestimmten Layeranzahl erzeugt:
-            wenn die Layeranzahl Range zwischen 7 und 9 liegt, self.__create_variations = True ist und
-            die Variable self.__number_of_variations = 4 ist werden 4 Netze mit 7 Layern und 4 Netze
-            mit 8 Layern erzeugt. Diese können dann gegeneinander getestet werden und geben eine bessere
-            Übersicht über eine gute Layeranzahl.
-            '''
-            min_layer = self.__layer_range[0]
-            max_layer = self.__layer_range[1]
-            if min_layer == max_layer:
-                max_layer += 1
-            for layer in range(min_layer, max_layer): 
-                variation_counter = 0
-                while variation_counter < self.__number_of_variations:
-                    variation_counter +=1 
-                    dropout_counter = 0
-                    act_count = 0
-                    specs_dict = {}
-                    middle = layer//2
-                    for l in range(layer):
-                        layer_specs = []
-                        if self.__random_activation:#random activation pick ist aktiviert
-                            act = random.choice(self.__activations)
+            
+            if self.__pure:
+                '''
+                es werden mehr als ein Netz von einer bestimmten Layeranzahl erzeugt:
+                wenn die Layeranzahl Range zwischen 7 und 9 liegt, self.__create_variations = True ist und
+                die Variable self.__number_of_variations = 4 ist werden 4 Netze mit 7 Layern und 4 Netze
+                mit 8 Layern erzeugt. Diese können dann gegeneinander getestet werden und geben eine bessere
+                Übersicht über eine gute Layeranzahl. Wenn self.__pure auf True gesetzt wird, wird aus der 
+                Liste mit activationfunctions [relu, sigmoid, tanh] als default 'reine' Netze erzeugt, die immmer
+                nur eine der Funktionen enthält (Relu als anfang). Danach werden diese netze kopiert, nur dass die 
+                Aktivierungsfunktionen überschrieben werden (ReLu wird durch sigmoid und tanh ersetzt). Zuletzt werden 
+                die Funktionen wild gemischt.
+                '''
+                min_layer = self.__layer_range[0]
+                max_layer = self.__layer_range[1]
+                if min_layer == max_layer:
+                    max_layer += 1
+                #pure ist true, deswegen wird zu anfang eine der aktivierungsfunktionen ausgewählt, die fürs ganze netz gewählt wird
+                act = random.choice(self.__activations)
+                for layer in range(min_layer, max_layer): 
+                    variation_counter = 0
+                    while variation_counter < self.__number_of_variations:
+                        variation_counter +=1 
+                        dropout_counter = 0
+                        act_count = 0
+                        specs_dict = {}
+                        middle = layer//2
+                        for l in range(layer):
+                            layer_specs = []
                             key = act+str(act_count)
                             act_count += 1
                             if dropout_counter == self.__dropout_number:
@@ -305,23 +295,72 @@ class HP_Layer_Optimizer(object):
                                 layer_specs.append(l_)
                                 layer_specs.append(in_)
                                 layer_specs.append(out_)
-                            if l == layer-1:
-                                l_ = 'linear'
-                                layer_specs = [l_,in_,self.__output_last]
-                                specs_dict['last'] = layer_specs#layer wird ohne activation gespeichert und als letztes Layer des NN gekennzeichnet
+                            #if l == layer-1:
+                            #    l_ = 'linear'
+                            #    layer_specs = [l_,in_,self.__output_last]
+                                #specs_dict['last'] = layer_specs#layer wird ohne activation gespeichert und als letztes Layer des NN gekennzeichnet
                                 
-                            elif l == 0:
+                            if l == 0:
                                 specs_dict['first'] = layer_specs
                             else:
                                 if specs_dict[list(specs_dict.keys())[-1]][0] == 'dropout':# keine activation function bei layern direkt nach einem dropout layer
                                     key = 'no_activation'+str(act_count)
+                                if l == layer -1:
+                                    l_ = 'linear'
+                                    layer_specs = [l_, in_, self.__output_last]
                                 specs_dict[key] = layer_specs
-                    key = random.randint(0,10000)
-                    while key in list(self.model_specs_combinations.keys()):
-                         key = random.randint(0,10000)
-                    self.model_specs_combinations[key]= specs_dict   
-                    print(specs_dict,'\n')
-                
+                        key = random.randint(0,10000)
+                        while key in list(self.model_specs_combinations.keys()):
+                             key = random.randint(0,10000)
+                        self.model_specs_combinations[key]= specs_dict   
+                        print(specs_dict,'\n')
+                        
+                used_acts = [act]
+                act_count = 0
+                netze = list(self.model_specs_combinations.values())
+                mixed = []
+                if self.__random_activation:
+                    p_ = 0
+                    for netz in netze:
+                        netz_neu = {}
+                        for act_alt, layer_spec in netz.items():
+                            if act_alt.startswith('no_activation') or act_alt.startswith('first'):
+                                netz_neu[act_alt] = layer_spec
+                            else:
+                                act_neu = random.choice(self.__activations)
+                                pp = act_neu+str(p_)
+                                p_ += 1
+                                netz_neu[pp]= layer_spec
+                        mixed.append(netz_neu)
+                for activation in self.__activations:
+                    if activation in used_acts:
+                        continue
+                    else:
+                        for netz in netze:#alle bisher erzeugten netze werden betrachtet
+                            key = random.randint(0,10000)
+                            while key in list(self.model_specs_combinations.keys()):
+                                key = random.randint(0,10000)
+                            netz_neu = {}
+                            for act_alt, layer in netz.items():
+                                if act_alt.startswith('no_activation') or act_alt.startswith('first'):
+                                    netz_neu[act_alt] = layer
+                                else:
+                                    act_ = activation+str(act_count)
+                                    act_count += 1
+                                    netz_neu[act_] = layer
+                            print(netz_neu,'\n')
+                            self.model_specs_combinations[key] = netz_neu
+                if len(mixed) != 0:
+                    for netz in mixed:
+                        print("mixed netz",netz)
+                        key = random.randint(0,10000)
+                        while key in list(self.model_specs_combinations.keys()):
+                            key = random.randint(0,10000)
+                        self.model_specs_combinations[key] = netz
+                print("alle kombinationen nach create combination:", self.model_specs_combinations)
+            else:
+                raise Exception('please et pure_activations to True, False not implemented')
+                    
         else:
             min_layer = self.__layer_range[0]
             max_layer = self.__layer_range[1]
@@ -395,6 +434,9 @@ class HP_Layer_Optimizer(object):
                             #    key = 'no_activation'+str(act_count)
                             if specs_dict[list(specs_dict.keys())[-1]][0] == 'dropout':# keine activation function bei layern direkt nach einem dropout layer
                                 key = 'no_activation'+str(act_count)
+                            if l == layer -1:
+                                l_ = 'linear'
+                                layer_specs = [l_, in_, self.__output_last]
                             specs_dict[key] = layer_specs
                 key = random.randint(0,10000)
                 while key in list(self.model_specs_combinations.keys()):
@@ -674,9 +716,9 @@ class HP_Optimizer(object):
                     loss = criterion(out, target)
                     loss.backward()
                     optimizer.step()
-                    print("Train Epoche: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
-                        epoch, batch_id *len(data), len(self.train_data),
-                    100. * batch_id / len(self.train_data), loss.item()))
+                    #rint("Train Epoche: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
+                    #   epoch, batch_id *len(data), len(self.train_data),
+                    #00. * batch_id / len(self.train_data), loss.item()))
                     batch_id +=1
         else:
             self.__model.train()
