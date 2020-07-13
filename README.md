@@ -64,6 +64,7 @@ Der Code ist in zwei Formaten verfügbar:
      ```
     uploaded = files.upload()
     ```
+    ```
     sliced_races = {}
     for element in uploaded:
       try:
@@ -75,6 +76,7 @@ Der Code ist in zwei Formaten verfügbar:
         print(e)
     f = int(element.split('_')[-1].split('.')[0]) #raceid wird als key gesetzt
     sliced_races[f] = df
+    ```
 
 **2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
 
