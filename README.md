@@ -27,11 +27,10 @@ Der Code ist in zwei Formaten verfügbar:
 ### 2.4 Ausführung des Codes:
 #### Der Code soll in Google Colab ausgeführt werden:<br>
   Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
-    ```
-    from google.colab import files
-    
-    uploaded = files.upload()
-    ```
+    ```python
+s = "Python syntax highlighting"
+print s
+```
 
 
 ### 2.5 Daten:
