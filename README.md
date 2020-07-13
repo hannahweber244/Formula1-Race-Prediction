@@ -64,6 +64,17 @@ Der Code ist in zwei Formaten verfügbar:
      ```
     uploaded = files.upload()
     ```
+    sliced_races = {}
+    for element in uploaded:
+      try:
+         df = pd.read_csv(element, engine = 'python', sep = ';', decimal = '.')
+         del df['Unnamed: 0']
+      except Exception as e:
+        df = pd.readcsv(element, engine = 'c', sep = ';', decimal = '.')
+        del df['Unnamed: 0']
+        print(e)
+    f = int(element.split('_')[-1].split('.')[0]) #raceid wird als key gesetzt
+    sliced_races[f] = df
 
 **2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
 
