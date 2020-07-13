@@ -38,21 +38,26 @@ Die folgende Tabelle enthält alle wichtigen Packages und Dependencies für dies
 Der Code ist in zwei Formaten verfügbar:
 1. Jupyter Notebook
 2. py-Dateien
-<br>Beide Formate könne gleichwertig verwendet werden, die Jupyter Notebooks bieten jedoch eine bessere visuelle Unterstützung und zusätzliche Informationen zum Vorgehen. Der Code für die Lineare Regression ist nur in einem Jupyter Notebook verfügbar.
+<br>Die Jupyter Notebooks bieten eine bessere Unterstützung, als die einfachen .py-Dateien. 
 
 ### 2.4 Codeinhalt:
 
 - Jupyter Notebooks:
-  - Datenaufbereitung.ipynb - Datenverarbeitung, -aufbereitung und Export
-  - LineareRegression Final.ipynb - Lineare Regression und Regularisierung mit Ergebnissen
+  - Datenaufbereitung.ipynb: Datenverarbeitung, -aufbereitung und Export
+  - LineareRegression Final.ipynb: Lineare Regression und Regularisierung mit Ergebnissen
+  - NeuronalesNetz.ipynb: Hyperparameteroptimierung, Neuronales Netz, Training und finales Testen
+  
+- .py Dateien:
+  - main.py: Startet 
 
 ### 2.5 Ausführung des Codes:
-#### Der Code soll in Google Colab ausgeführt werden:<br>
-  Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
-    ```python
+**1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
+   Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
+    ```
         s = "Python syntax highlighting"
       print s
     ```
+**2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
 
 
 ### 2.6 Daten:
