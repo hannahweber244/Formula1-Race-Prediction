@@ -66,8 +66,13 @@ Der Code ist in zwei Formaten verfügbar:
     ```
     ```
     sliced_races = {}
+    ```<br>
+    ```
     for element in uploaded:
+    ```<br>
+      ```
       try:
+      ```
          df = pd.read_csv(element, engine = 'python', sep = ';', decimal = '.')
          del df['Unnamed: 0']
       except Exception as e:
