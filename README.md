@@ -40,13 +40,13 @@ Der Code ist in zwei Formaten verfügbar:
 2. py-Dateien
 <br>Beide Formate könne gleichwertig verwendet werden, die Jupyter Notebooks bieten jedoch eine bessere visuelle Unterstützung und zusätzliche Informationen zum Vorgehen. Der Code für die Lineare Regression ist nur in einem Jupyter Notebook verfügbar.
 
-### 2.3 Codeinhalt:
+### 2.4 Codeinhalt:
 
 - Jupyter Notebooks:
-  - Datenaufbereitung.ipynb --> Datenverarbeitung, -aufbereitung und Export
-  - LineareRegression Final.ipynb
+  - Datenaufbereitung.ipynb - Datenverarbeitung, -aufbereitung und Export
+  - LineareRegression Final.ipynb - Lineare Regression und Regularisierung mit Ergebnissen
 
-### 2.4 Ausführung des Codes:
+### 2.5 Ausführung des Codes:
 #### Der Code soll in Google Colab ausgeführt werden:<br>
   Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
     ```python
@@ -55,7 +55,7 @@ Der Code ist in zwei Formaten verfügbar:
     ```
 
 
-### 2.5 Daten:
+### 2.6 Daten:
 Die Daten können entweder von kaggle direkt heruntergeladen werden (https://www.kaggle.com/cjgdev/formula-1-race-data-19502017) und dann mit Hilfe des entsprechenden Jupyter Notebooks (Datenaufbereitung.ipynb) vorbereitet werden, oder die schon verarbeiteten Daten können aus dem Ordner sliced_data verwendet werden. 
 ## 3. Team Mitglieder:
 Julian Greil (3451503) <br>
