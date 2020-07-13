@@ -56,7 +56,8 @@ Der Code ist in zwei Formaten verfügbar:
     ```
         !pip install [packagename]
     ```
-    <br>2) Importieren von Daten:<br>
+    <br>
+   2) Importieren von Daten:<br>
     ```
     from google.colab import files
     ```<br>
