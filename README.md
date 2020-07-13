@@ -2,4 +2,7 @@
 Machine Learning Projekt für das Fach Data Exploration Project an der DHBW Mannheim, Team F1
 
 
-### Test
+### Code
+Der Code ist in zwei Formaten verfügbar:
+1. Jupyter Notebook
+2. py-Dateien
