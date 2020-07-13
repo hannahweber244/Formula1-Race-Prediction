@@ -29,7 +29,7 @@ Der Code ist in zwei Formaten verfügbar:
 
 
 ### 2.5 Daten:
-Die Daten können mit Hilfe 
+Die Daten können entweder mit Hilfe des entsprechenden 
 ## 3. Team Mitglieder:
 Julian Greil (3451503) <br>
 Florian Köhler (4810569) <br>
