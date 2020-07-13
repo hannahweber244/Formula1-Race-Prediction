@@ -27,10 +27,10 @@ Der Code ist in zwei Formaten verfügbar:
 ### 2.4 Ausführung des Codes:
 #### Der Code soll in Google Colab ausgeführt werden:<br>
   Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
-    '''
+    ```
     def func():
       bla bla
-    '''
+    ```
 
 
 ### 2.5 Daten:
