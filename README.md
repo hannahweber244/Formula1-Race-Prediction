@@ -22,7 +22,7 @@ Beide Formate könne gleichwertig verwendet werden, die Jupyter Notebooks bieten
 
 
 ## 3. Team Mitglieder:
-Julian Greil, (Matrikel
-Florian Köhler
-Hannah Weber
-Manuel Zeh
+Julian Greil (3451503) <br>
+Florian Köhler (4810569) <br>
+Hannah Weber (3143200) <br>
+Manuel Zeh (6061471) 
