@@ -29,7 +29,7 @@ Der Code ist in zwei Formaten verfügbar:
 
 
 ### 2.5 Daten:
-Die Daten können entweder mit Hilfe des entsprechenden 
+Die Daten können entweder von kaggle direkt heruntergeladen werden (https://www.kaggle.com/cjgdev/formula-1-race-data-19502017) und dann mit Hilfe des entsprechenden Jupyter Notebooks (Datenaufbereitung.ipynb) vorbereitet werden, oder die schon verarbeiteten Daten können aus dem Ordner sliced_data verwendet werden. 
 ## 3. Team Mitglieder:
 Julian Greil (3451503) <br>
 Florian Köhler (4810569) <br>
