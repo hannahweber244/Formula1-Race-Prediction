@@ -57,6 +57,7 @@ Der Code ist in zwei Formaten verfügbar:
         s = "Python syntax highlighting"
       print s
     ```
+
 **2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
 
 
