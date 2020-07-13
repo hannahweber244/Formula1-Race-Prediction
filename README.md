@@ -2,11 +2,13 @@
 Machine Learning Projekt für das Fach Data Exploration Project an der DHBW Mannheim, Team F1
 
 ## 1. Projektziel:
-Ziel dieses Projekts ist es ein (oder mehrere) Modelle zur Verfügung zu stellen, welche die Top X Platzierungen eines beliebiegen Formel 1 Rennens vorherzusagen. 
+Ziel dieses Projekts ist es ein (oder mehrere) Modelle zur Verfügung zu stellen, welche die Top X Platzierungen eines beliebiegen Formel 1 Rennens vorhersagen. 
 
 ## 2. Projektaufbau:
 ### 2.1 Modelle:
 1. Lineare Regression: <br>
+Es ist mit Hilfe der sklearn Klassen LinearRegression(), Lasso() und Ridge() eine Lineare Regression ohne-, mit L1- und L2-Regularisierung implementiert worden. Ziel der Regularisierung ist es die sehr kleinen Koeffizienten der kategorischen (one.hot-encodeden) Attribute zu limitieren. 
+
 2. Neuronales Netz: <br>
 Um die Nichtlinearität in den Daten zu lernen wurde sich für ein Neuronales Netz entschieden. Dieses wird mit Hilfe von pytorch implementiert
 
