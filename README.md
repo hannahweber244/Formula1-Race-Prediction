@@ -28,8 +28,8 @@ Der Code ist in zwei Formaten verfügbar:
 #### Der Code soll in Google Colab ausgeführt werden:<br>
   Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
     ```
-    def func():
-      bla bla
+    from google.colab import files<br>
+    uploaded = files.upload()
     ```
 
 
