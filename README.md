@@ -52,40 +52,14 @@ Der Code ist in zwei Formaten verfügbar:
 
 ### 2.5 Ausführung des Codes:
 **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
-   1) Installation noch nicht in Umgebung installierter Packages:<br>
+   Installation noch nicht in Umgebung installierter Packages:<br>
     ```
         !pip install [packagename]
-    ```
-    <br>
-   2) Importieren von Daten:<br>
-    ```
-    from google.colab import files
     ```<br>
-     ```
-    uploaded = files.upload()
-    ```
-    ```
-    sliced_races = {}
-    ```<br>
-    ```
-    for element in uploaded:
-    ```<br>
-    ```
-      try:
-    ```
-    <br>
-    ```
-         df = pd.read_csv(element, engine = 'python', sep = ';', decimal = '.')
-         del df['Unnamed: 0']
-      except Exception as e:
-        df = pd.readcsv(element, engine = 'c', sep = ';', decimal = '.')
-        del df['Unnamed: 0']
-        print(e)
-    f = int(element.split('_')[-1].split('.')[0]) #raceid wird als key gesetzt
-    sliced_races[f] = df
-    ```
+    Weitere Hinweise zum Vorgehen finden sich im Code selbst!
 
 **2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
+Anweisungen im Code folgen!
 
 
 ### 2.6 Daten:
