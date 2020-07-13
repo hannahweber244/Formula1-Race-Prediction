@@ -14,7 +14,7 @@ Um die Nichtlinearität in den Daten zu lernen wurde sich für ein Neuronales Ne
 Der Code ist in zwei Formaten verfügbar:
 1. Jupyter Notebook
 2. py-Dateien
-Beide Formate könne gleichwertig verwendet werden, die Jupyter Notebooks beiten jedoch eine bessere visuelle Unterstützung und zusätzliche Informationen zum Vorgehen.
+Beide Formate könne gleichwertig verwendet werden, die Jupyter Notebooks bieten jedoch eine bessere visuelle Unterstützung und zusätzliche Informationen zum Vorgehen. Code für die Lineare Regression ist nur in einem Jupyter Notebook verfügbar.
 
 ### 2.3 Ausführung des Codes:
 ...
