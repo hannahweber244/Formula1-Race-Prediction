@@ -12,7 +12,14 @@ Es ist mit Hilfe der sklearn Klassen LinearRegression(), Lasso() und Ridge() ein
 2. Neuronales Netz: <br>
 Um die Nichtlinearität in den Daten zu lernen wurde sich für ein Neuronales Netz entschieden. Dieses wird mit Hilfe von pytorch implementiert. Im Zuge der Hyperparameteroptimierung werden Neuronale Netze dynamisch erzeugt und miteinander verglichen.
 
-### 2.2 Codeformat:
+### 2.2 Requirements:
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+### 2.3 Codeformat:
 Der Code ist in zwei Formaten verfügbar:
 1. Jupyter Notebook
 2. py-Dateien
