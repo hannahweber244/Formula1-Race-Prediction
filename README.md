@@ -2,7 +2,7 @@
 Machine Learning Projekt für das Fach Data Exploration Project an der DHBW Mannheim, Team F1
 
 ## 1. Projektziel:
-Ziel dieses Projekts ist es ein (oder mehrere) Modelle zur Verfügung zu stellen, welche die Top X Platzierungen eines beliebiegen Formel 1 Rennens vorhersagen. 
+Ziel dieses Projekts ist es ein (oder mehrere) Modelle zur Verfügung zu stellen, welche die Top 10 Platzierungen eines beliebiegen Formel 1 Rennens vorhersagen. 
 
 ## 2. Projektaufbau:
 ### 2.1 Modelle:
@@ -25,7 +25,12 @@ Der Code ist in zwei Formaten verfügbar:
   - LineareRegression Final.ipynb
 
 ### 2.4 Ausführung des Codes:
-...
+#### Der Code soll in Google Colab ausgeführt werden:<br>
+  Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
+    '''
+    def func():
+      bla bla
+    '''
 
 
 ### 2.5 Daten:
