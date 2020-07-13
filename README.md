@@ -17,19 +17,21 @@ Um die Nichtlinearität in den Daten zu lernen wurde sich für ein Neuronales Ne
 | ------------- |:-------------:|
 | cycler      | 0.10.0 |
 | joblib      | 0.16.0   |
-| zebra stripes | are neat      |
-| col 3 is      | right-aligned |
-| col 2 is      | centered      |
-| zebra stripes | are neat      |
-| col 3 is      | right-aligned |
-| col 2 is      | centered      |
-| zebra stripes | are neat      | 
-| col 3 is      | right-aligned | 
-| col 2 is      | centered      | 
-| zebra stripes | are neat      | 
-| col 3 is      | right-aligned |
-| col 2 is      | centered      | 
-| zebra stripes | are neat      |  
+| kiwisolver | 1.2.0 |
+| matplotlib   | 3.2.2 |
+| numpy     | 1.19.0   |
+| pandas | 1.0.5     |
+| pandasql   | 0.7.3 |
+| pyparsing     | 2.4.7    |
+| python-dateutil | 2.8.1     | 
+| pytz   | 2020.1 | 
+| scikit-learn     | 0.23.1     | 
+| scipy | 1.5.1      | 
+| seaborn      | 0.10.0 |
+| six     | 1.15.0    | 
+| sklearn | 0.0    |  
+|SQLAlchemy | 1.3.18 |
+| threadpoolctl | 2.1.0 |
 
 ### 2.3 Codeformat:
 Der Code ist in zwei Formaten verfügbar:
