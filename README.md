@@ -56,6 +56,12 @@ Der Code ist in zwei Formaten verfügbar:
     ```
         !pip install [packagename]
     ```
+    ```
+    from google.colab import files
+    ```
+     ```
+    uploaded = files.upload()
+    ```
 
 **2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
 
