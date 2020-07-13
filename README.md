@@ -70,9 +70,11 @@ Der Code ist in zwei Formaten verfügbar:
     ```
     for element in uploaded:
     ```<br>
-      ```
+    ```
       try:
-      ```
+    ```
+    <br>
+    ```
          df = pd.read_csv(element, engine = 'python', sep = ';', decimal = '.')
          del df['Unnamed: 0']
       except Exception as e:
