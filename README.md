@@ -52,10 +52,11 @@ Der Code ist in zwei Formaten verfügbar:
 
 ### 2.5 Ausführung des Codes:
 **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
-   Die load_data() Funktion kann nicht aufgerufen werden, stattdessen wird folgender Code verwendet:<br>
+   1) Installation noch nicht in Umgebung installierter Packages:<br>
     ```
         !pip install [packagename]
     ```
+    <br>2) Importieren von Daten:
     ```
     from google.colab import files
     ```
