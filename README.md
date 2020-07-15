@@ -58,8 +58,14 @@ Der Code ist in zwei Formaten verfügbar:
     ```<br>
     Weitere Hinweise zum Vorgehen finden sich im Code selbst!
 
-**2. Möglichkeit::** Der Code wird lokal ausgeführt<br>
+**2. Möglichkeit:** Der Code wird lokal ausgeführt<br>
 Anweisungen im Code folgen!
+
+**Datenaufbereitung**<br>
+Die Daten aus dem Ordner "kaggle data" müssen im selben Ordner wie das Notebook bereit liegen und müssen dort die einzigen verfügbaren .csv Dateien sein.<br>
+Das Notebook kann von oben nach unten durchgeladen werden.<br>
+Output des Notebooks: Ordner sliced_data, wie auch in Git bereitgestellt <br>
+Rechendauer ~ 30/45min
 
 
 ### 2.6 Daten:
