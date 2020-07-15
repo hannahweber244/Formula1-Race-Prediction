@@ -56,7 +56,12 @@ Der Code ist in zwei Formaten verfügbar:
     ```
         !pip install [packagename]
     ```<br>
-    Weitere Hinweise zum Vorgehen finden sich im Code selbst!
+    Ein Beispiel kann hier <br>
+    ```
+    !pip3 install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
+    ```<br>
+    um pytorch für Google Colab zu installieren.
+    Alle weiteren Hinweise zum Vorgehen in Google Colab finden sich im Code selbst!
 
 **2. Möglichkeit:** Der Code wird lokal ausgeführt<br>
 Anweisungen im Code folgen!
