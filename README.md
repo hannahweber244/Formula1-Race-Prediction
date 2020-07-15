@@ -62,8 +62,8 @@ Der Code ist in zwei Formaten verfügbar:
 Anweisungen im Code folgen!
 
 **Datenaufbereitung**<br>
-Die Daten aus dem Ordner "kaggle data" müssen im selben Ordner wie das Notebook bereit liegen und müssen dort die einzigen verfügbaren .csv Dateien sein.<br>
-Das Notebook kann von oben nach unten durchgeladen werden.<br>
+Das Notebook Datenaufbereitung.ipynb muss im gleichen Ordner liegen, wie der Ordner "kaggle_data".<br>
+Das Notebook kann dann ohne weiteres von oben nach unten durchgeladen werden.<br>
 Output des Notebooks: Ordner sliced_data, wie auch in Git bereitgestellt <br>
 Rechendauer ~ 30/45min
 
