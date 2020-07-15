@@ -74,7 +74,7 @@ Rechendauer ~ 30/45min
 
 
 ### 2.6 Daten:
-Die Daten können entweder von kaggle direkt heruntergeladen werden (https://www.kaggle.com/cjgdev/formula-1-race-data-19502017) und dann mit Hilfe des entsprechenden Jupyter Notebooks (Datenaufbereitung.ipynb) vorbereitet werden, oder die schon verarbeiteten Daten können aus dem Ordner sliced_data verwendet werden. 
+Die Daten stammen von kaggle (https://www.kaggle.com/cjgdev/formula-1-race-data-19502017) und liegen als Rohdaten in dem Ordner kaggle_data vor. Mit Hilfe des entsprechenden Jupyter Notebooks (Datenaufbereitung.ipynb) können diese aufbereitet und für die Modelle vorbereitet werden. Anstelle dessen können auch die schon verarbeiteten Daten aus dem Ordner sliced_data verwendet werden, die extra für diesen Zweck vorbereitet worden sind. 
 ## 3. Team Mitglieder:
 Julian Greil (3451503) <br>
 Florian Köhler (4810569) <br>
