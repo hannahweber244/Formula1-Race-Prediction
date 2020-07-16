@@ -72,7 +72,7 @@ Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus die
         ```<br>
     sein, um pytorch für Google Colab zu installieren. Wenn Google Colab verwendet wird, müssen Daten über einen Umweg in das Notebook geladen werden, da sie zunächst auf Google Colab hochgeladen werden müssen. Die entsprechende Zelle ist im Notebook gekennzeichnet und mit allen relevanten HInweisen versehen.
 
-  **2. Möglichkeit:** 
+  **2. Möglichkeit:** <br>
   Der Code wird lokal ausgeführt. Bei dieser Variante muss zur Ausführung des Notebooks nichts weiter beachtet werden. Bei der Ausführung sollte nur die Google Colab Zelle für den Datenupload nicht mit ausgeführt werden. Anweisungen im Code folgen!
 
 
