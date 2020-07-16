@@ -35,7 +35,7 @@ Die folgende Tabelle enthält alle wichtigen Packages und Dependencies für dies
 | threadpoolctl | 2.1.0 |
 
 ### 2.3 Codeformat:
-Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in diesen bereitgestellt. 
+Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in diesem Format bereitgestellt. 
 
 ### 2.4 Codeinhalt:
 
