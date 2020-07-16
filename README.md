@@ -45,6 +45,9 @@ Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in dies
   - NeuronalesNetz.ipynb: Hyperparameteroptimierung, Neuronales Netz, Training und finales Testen
 
 ### 2.5 Ausführung des Codes:
+Bevor der Code ausgeführt wird, sollte sichergestellt werden, dass alle Requirements aus der requirements.txt Datei (siehe auch 2.2 Requirements) installiert sind. Besonders wichtig ist es, für die lokale Entwicklungsumgebung das Package pytorch mit den richtigen Spezifikationen zu installieren. Eine Anleitung, wie die Installation durchgeführt werden sollte ist unter https://pytorch.org/ zu finden.  
+
+
 **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
    Installation noch nicht in Umgebung installierter Packages:<br>
     ```
@@ -60,15 +63,18 @@ Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in dies
 **2. Möglichkeit:** Der Code wird lokal ausgeführt<br>
 Anweisungen im Code folgen!
 
-**Datenaufbereitung**<br>
+**Datenaufbereitung.ipynb:**<br>
 Das Notebook Datenaufbereitung.ipynb muss im gleichen Ordner liegen, wie der Ordner "kaggle_data".<br>
 Das Notebook kann dann ohne weiteres von oben nach unten durchgeladen werden.<br>
 Output des Notebooks: Ordner sliced_data, wie auch in Git bereitgestellt <br>
 Rechendauer ~ 30/45min
 
+**LineareRegression.ipynb:**<br>
+Das No
 
 ### 2.6 Daten:
 Die Daten stammen von kaggle (https://www.kaggle.com/cjgdev/formula-1-race-data-19502017) und liegen als Rohdaten in dem Ordner kaggle_data vor. Mit Hilfe des entsprechenden Jupyter Notebooks (Datenaufbereitung.ipynb) können diese aufbereitet und für die Modelle vorbereitet werden. Anstelle dessen können auch die schon verarbeiteten Daten aus dem Ordner sliced_data verwendet werden, die extra für diesen Zweck vorbereitet worden sind. 
+
 ## 3. Team Mitglieder:
 Julian Greil (3451503) <br>
 Florian Köhler (4810569) <br>
