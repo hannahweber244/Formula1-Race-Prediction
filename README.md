@@ -45,7 +45,7 @@ Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in dies
   - NeuronalesNetz.ipynb: Hyperparameteroptimierung, Neuronales Netz, Training und finales Testen
 
 ### 2.5 Ausführung des Codes:
-Bevor der Code ausgeführt wird, sollte sichergestellt werden, dass alle Requirements aus der requirements.txt Datei (siehe auch 2.2 Requirements) installiert sind. Besonders wichtig ist es, für die lokale Entwicklungsumgebung das Package pytorch mit den richtigen Spezifikationen zu installieren. Eine Anleitung, wie die Installation durchgeführt werden sollte ist unter https://pytorch.org/ zu finden.  
+Bevor der Code ausgeführt wird, sollte sichergestellt werden, dass alle Requirements aus der dependencies.txt Datei (siehe auch 2.2 Requirements) installiert sind. Besonders wichtig ist es, für die lokale Entwicklungsumgebung das Package pytorch mit den richtigen Spezifikationen zu installieren. Eine Anleitung, wie die Installation durchgeführt werden sollte ist unter https://pytorch.org/ zu finden.  
 
 
 **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
