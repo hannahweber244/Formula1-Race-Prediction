@@ -43,6 +43,11 @@ Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in dies
   - Datenaufbereitung.ipynb: Datenverarbeitung, -aufbereitung und Export
   - LineareRegression Final.ipynb: Lineare Regression und Regularisierung mit Ergebnissen
   - NeuronalesNetz.ipynb: Hyperparameteroptimierung, Neuronales Netz, Training und finales Testen
+  
+- dependencies.txt: Package Dependencies und Requirements
+- Final_F1.pt: Pytorch Datei, die das finale, vortrainierte Neuronale Netz enthält 
+- kaggle_data: Ordner, welcher die Rohdaten von Kaggle enthält
+- sliced_data: Ordner, welcher Formel-1-Rennen bis zur 50% Marke enthält
 
 ### 2.5 Ausführung des Codes:
 Bevor der Code ausgeführt wird, sollte sichergestellt werden, dass alle Requirements aus der dependencies.txt Datei (siehe auch 2.2 Requirements) installiert sind. Besonders wichtig ist es, für die lokale Entwicklungsumgebung das Package pytorch mit den richtigen Spezifikationen zu installieren. Eine Anleitung, wie die Installation durchgeführt werden sollte ist unter https://pytorch.org/ zu finden.  
