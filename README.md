@@ -61,20 +61,20 @@ Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus die
 **NeuronalesNetz.ipynb:**<br>
 Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. Das Notebook kann 
 
-    **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
+   **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
       Installation noch nicht in Umgebung installierter Packages:<br>
         ```
             !pip install [packagename]
         ```<br>
-        Ein Beispiel kann hier <br>
+      Ein Beispiel kann hier <br>
         ```
         !pip3 install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f    https://download.pytorch.org/whl/torch_stable.html
         ```<br>
-        um pytorch für Google Colab zu installieren.
-        Alle weiteren Hinweise zum Vorgehen in Google Colab finden sich im Code selbst!
+      sein um pytorch für Google Colab zu installieren.
+      Alle weiteren Hinweise zum Vorgehen in Google Colab finden sich im Code selbst!
 
-    **2. Möglichkeit:** Der Code wird lokal ausgeführt<br>
-    Anweisungen im Code folgen!
+  **2. Möglichkeit:** Der Code wird lokal ausgeführt<br>
+  Anweisungen im Code folgen!
 
 
 ### 2.6 Daten:
