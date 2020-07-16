@@ -43,9 +43,6 @@ Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in dies
   - Datenaufbereitung.ipynb: Datenverarbeitung, -aufbereitung und Export
   - LineareRegression Final.ipynb: Lineare Regression und Regularisierung mit Ergebnissen
   - NeuronalesNetz.ipynb: Hyperparameteroptimierung, Neuronales Netz, Training und finales Testen
-  
-- .py Dateien:
-  - main.py: Startet 
 
 ### 2.5 Ausführung des Codes:
 **1. Möglichkeit:** Der Code soll in Google Colab ausgeführt werden:<br>
