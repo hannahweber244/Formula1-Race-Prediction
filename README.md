@@ -64,7 +64,7 @@ Rechendauer ~ 30/45min
 Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. Bei der Ausführung des Notebooks müssen keine Besonderheiten beachtet werden. Alle relevanten Informationen sind im Notebook zu finden.
 
 **NeuronalesNetz.ipynb:**<br>
-Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. Das Notebook kann in zwei Varianten ausgeführt werden:
+Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. In jedem Das Notebook kann in zwei Varianten ausgeführt werden (siehe 1. und 2. Möglichkeit). In jedem Fall sollte **auf die angegebenen Ausführzeiten geachtet werden**, da diese insgesamt ~17h betragen können!
 
    **1. Möglichkeit:** 
    Der Code soll in Google Colab ausgeführt werden. Packages müssen in der Umgebung eventuell installiert werden (pytorch, pandasql, etc.). Die Installation noch nicht in Umgebung installierter Packages funktioniert wie folgt:<br>
