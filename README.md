@@ -64,7 +64,8 @@ Rechendauer ~ 30/45min
 Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. Bei der Ausführung des Notebooks müssen keine Besonderheiten beachtet werden. Alle relevanten Informationen sind im Notebook zu finden.
 
 **NeuronalesNetz.ipynb:**<br>
-Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. Das Notebook kann in zwei Varianten ausgeführt werden (siehe 1. und 2. Möglichkeit). In jedem Fall sollte **auf die angegebenen Ausführzeiten geachtet werden**, da diese insgesamt ~25h betragen können! 17h werden für die Hyperparameteroptimierung benötigt und 8h für die Crossvalidation.
+Das Notebook muss im gleichen Verzeichnis liegen, wie sliced_data, damit aus diesem die CSV Dateien geladen werden können. Das Notebook kann in zwei Varianten ausgeführt werden (siehe 1. und 2. Möglichkeit). In jedem Fall sollte **auf die angegebenen Ausführzeiten geachtet werden**, da diese insgesamt ~25h betragen können! 17h werden für die Hyperparameteroptimierung benötigt und 8h für die Crossvalidation.<br>
+**wichtig: Die zeitaufwändigen Zellen können auch übersprungen werden. Stattdessen kann das vortrainierte Modell (Final_F1.pt) im letzten Teil des Notebooks geladen und der finale Test mit diesem ausgeführt werden. Das bereitgestellte Modell ist das Ergebnis der als Teil des Projekts durchgeführten Hyperparameteroptimierung.**  
 
    **1. Möglichkeit:** 
    Der Code soll in Google Colab ausgeführt werden. Packages müssen in der Umgebung eventuell installiert werden (pytorch, pandasql, etc.). Die Installation noch nicht in Umgebung installierter Packages funktioniert wie folgt:<br>
