@@ -50,7 +50,7 @@ Der Code wurde in Jupyter Notebooks entwickelt und wird aus diesem Grund in dies
 - sliced_data: Ordner, welcher Formel-1-Rennen bis zur 50% Marke enthält
 
 ### 2.5 Ausführung des Codes:
-Bevor der Code ausgeführt wird, sollte sichergestellt werden, dass alle Requirements aus der dependencies.txt Datei (siehe auch 2.2 Requirements) installiert sind. Besonders wichtig ist es, für die lokale Entwicklungsumgebung das Package pytorch mit den richtigen Spezifikationen zu installieren. Eine Anleitung, wie die Installation durchgeführt werden sollte ist unter https://pytorch.org/ zu finden.  
+Bevor der Code ausgeführt wird, sollte sichergestellt werden, dass alle Requirements aus der dependencies.txt Datei (siehe auch 2.2 Requirements) installiert sind. Besonders wichtig ist es, für die lokale Entwicklungsumgebung das Package pytorch mit den richtigen Spezifikationen zu installieren. Eine Anleitung, wie die Installation durchgeführt werden sollte ist unter https://pytorch.org/ zu finden. Im Code selbst ist es egal, welche pytorch Version und 
 
 
 
